@@ -7,3 +7,5 @@ input tables for analysis when all families present were:
 input tables for analysis when top 10 families were present were: 
 1. KC_Rarefied_Top10_L7_USE.tsv
 2. roach_frass_rep_otu_USE_noDup.fa
+
+For alpha and beta diversity, the same R code was used as the composition analysis.
