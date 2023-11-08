@@ -11,8 +11,10 @@ input tables for analysis when top 10 families were present were:
 For alpha and beta diversity, the same R code was used as the composition analysis.
 
 Output files (all families):
+1. all_fam_path_abun_unstrat.tsv.zip - this file is the pathway abundance table for each sample.
 
 Output files (top 10 families):
+1. top10_path_abun_unstrat.tsv.zip - this file is the pathway abundance table for each sample. 
 
 Output files (contributing OTU to each pathway - all families):
 1. otu_contrib_path_abun_unstrat.tsv.gz - this file has the abundance of contributing OTU's to each pathway for each sample.
