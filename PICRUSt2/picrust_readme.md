@@ -15,3 +15,4 @@ Output files (all families):
 Output files (top 10 families):
 
 Output files (contributing OTU to each pathway - all families):
+1. otu_contrib_path_abun_unstrat.tsv.gz - this file has the abundance of contributing OTU's to each pathway for each sample.
