@@ -6,6 +6,7 @@
 
 library(ALDEx2)
 
+# the file needed for MC can be found in the PICRUSt2 directory.
 MC = read_tsv("/Users/kaylacross/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Frass_Paper/Sabree_L7/PICRUST2_all/picrust2_out_pipeline2/pathways_out/path_abun_unstrat.tsv")
 MC = as.data.frame(MC)
 
