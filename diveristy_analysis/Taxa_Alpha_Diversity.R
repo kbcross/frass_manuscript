@@ -25,7 +25,7 @@ library(dplyr)
 
 
 # Load diversity data.table. Change location. 
-location="/Users/kaylacross/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Frass_Paper/Sabree_L5/plots wo cellulose 5 8/L5 diversity/rerun_code"
+location="use_your_file_path_here"
 
 # Number of simulations for bootstrapping
 boot_sims=1000
@@ -35,7 +35,7 @@ source(file.path(location,"Functions.R"))
 
 file.name=c("diversity_min_size.Rdata")
 
-load("~/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Frass_Paper/Sabree_L5/plots wo cellulose 5 8/L5 diversity/rerun_code/diversity_min_size.Rdata")
+load("use_your_file_path_here/diversity_min_size.Rdata")
 
 # restructuring the data so that each hill number has it's own column and removing the LCL and UCL values
 data <- pivot_wider(diversity_min_size, 
@@ -122,7 +122,7 @@ rownames(LMM.table.Srar) <- c("SD among Individuals", "Intercept", "Protien Enri
 
 LMM.table.Srar <- format(LMM.table.Srar, scientific=F) # combinding data to be inputted into supplemental
 
-write.csv(LMM.table.Srar, "/Users/kaylacross/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Frass_Paper/Sabree_L5/plots wo cellulose 5 8/L5 diversity/rerun_code/LMM.table.Srar.csv")
+write.csv(LMM.table.Srar, "use_your_file_path_here/LMM.table.Srar.csv")
 
 # Residuals vs fitted and QQPlot of LMM with random intercept for Interpolated/Extrapolated Species Richness (using min reference size)
 par(mfrow=c(1,2),mai=c(1,0.5,1,0.5))
@@ -245,7 +245,7 @@ newdat$lt[newdat$diet=="DF"]="solid"
 newdat$lt[newdat$diet=="HN"]="solid"
 newdat$lt[newdat$diet=="LN"]="solid"
 
-write.csv(newdat, "SpeciesRich_nocell58_newdat.csv")
+write.csv(newdat, "use_your_file_path_here/SpeciesRich_nocell58_newdat.csv")
 
 g0 <- ggplot(newdat, aes(x=week0, y=`Srar`))+
   geom_point(colour=newdat$colors,
@@ -278,7 +278,7 @@ for (i in 1:length(div_index)){
 } 
 rm(i)
 names(confint_lmer) <- div_index
-save(confint_lmer,file="/Users/kaylacross/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Frass_Paper/Sabree_L5/plots wo cellulose 5 8/L5 diversity/rerun_code/CI_Shan_min_size.R")
+save(confint_lmer,file="use_your_file_path_here/CI_Shan_min_size.R")
 
 confint_lmer[["Shan"]] # this will be a little bit different due to bootstraping, but shouldn't be too off
 
@@ -297,7 +297,7 @@ rownames(LMM.table.shan) <- c("SD among Individuals", "Intercept", "Protien Enri
 
 LMM.table.shan <- format(LMM.table.shan, scientific=F)
 
-write.csv(LMM.table.shan, "/Users/kaylacross/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Frass_Paper/Sabree_L5/plots wo cellulose 5 8/L5 diversity/rerun_code/LMM.table.shan.csv")
+write.csv(LMM.table.shan, "use_your_file_path_here/LMM.table.shan.csv")
 
 # Residuals vs fitted and QQPlot of LMM with random intercept for Interpolated/Extrapolated Shannon Diversity (using min reference size)
 par(mfrow=c(1,2),mai=c(1,0.5,1,0.5))
@@ -414,7 +414,7 @@ newdat$lt[newdat$diet=="DF"]="solid"
 newdat$lt[newdat$diet=="HN"]="solid"
 newdat$lt[newdat$diet=="LN"]="solid"
 
-write.csv(newdat, "/Users/kaylacross/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Frass_Paper/Sabree_L5/plots wo cellulose 5 8/L5 diversity/rerun_code/ShanRich_nocell58_newdat.csv")
+write.csv(newdat, "use_your_file_path_here/ShanRich_nocell58_newdat.csv")
 
 #plot confidence
 g0 <- ggplot(newdat, aes(x=week0, y=`Shan`))+
